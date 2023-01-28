@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useMemo} from "react"
+import Stats from "./components/Stats";
+import Header from "./components/Header";
+import { ImageContext } from "./ImageContext";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  const [currentImage, setCurrentImage] = useState({
+    imageId: "",
+    imageUrl: "",
+    currentTeamId: "",
+    awayimageId: "",
+    awayimageUrl: "",
+    awaycurrentTeamId: ""
+  })
+
+  const providerValue = useMemo(()=> ({currentImage, setCurrentImage}), [currentImage, setCurrentImage])
+
+  return(
+    <div>
+    <ImageContext.Provider value = {providerValue}>
+    <Header />
+    <Stats />
+    </ImageContext.Provider>
     </div>
-  );
+  )
+  
 }
 
 export default App;

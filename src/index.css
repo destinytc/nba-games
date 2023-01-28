@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  box-sizing: border-box;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:lightslategray
 }
+nav{
+  
+  height: 45px;
+  width: 100%;
+  /*background-image: linear-gradient(to right,white,red);*/
+  background-color: #21222A;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 30px;
+  color:white;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
+}
+
+.nav-img{
+  width: 40px;
+  float:left;
+}
+
+.stats{
+  text-align: center;
+}
+.game-button{
+  background-color: orange;
+  color: black;
+  border: 2px solid orange;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 28px;
+  margin: 10px;
+}
+.game-date{
+  text-align: center;
+}
+
+.home-stats{
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  width: 450px;
+  background-color: white;
+  border: 5px solid black;
+  box-shadow: 1px 1px 1px 1px darkblue ;
+}
+
+.away-stats{
+  display:inline-block;
+  padding: 10px;
+  width: 450px;
+  background-color: white;
+  border: 5px solid black;
+  box-shadow: 1px 1px 1px 1px darkred;
+
+}
+
+.team-logo{
+  max-width: 300px;
+  max-height: 200px;
+ 
+}
+
+.home-label{
+  color:darkblue;
+  font-style: italic;
+}
+
+.away-label{
+  color:darkred;
+  font-style: italic;
+}
+
